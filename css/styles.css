@@ -1,5 +1,9 @@
+h1, h2 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
 body {
-    background-color: #fff;
+    background-color: #F5F5F5;
     color: #333;
     margin: 0;
     font: 1.2em / 1.2 Arial, Helvetica, sans-serif;
@@ -12,31 +16,31 @@ body {
   }
   
   .logo {
-    font-size: 200%;
-    padding: 50px 20px;
+    background-color: #C4DAD2;
+    padding: 30px 20px;
     margin: 0 auto;
-    max-width: 980px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .logo > h1 {
+    font-size: 200%;
   }
   
   .grid {
+    background-color: white;
     margin: 0 auto;
     padding: 0 20px;
     max-width: 980px;
+
+    /* Two-column layout */
     display: flex;
     gap: 50px;
   }
 
+  /* Column Spacing */
   .grid > article {
     flex: 2;
-  }
-
-  .grid > article img {
-    float: left;
-    margin-right: 10px;
-    margin-bottom: 5px;
-  }
-
-  .grid > article p {
     text-align: justify;
   }
   
@@ -45,8 +49,13 @@ body {
   }
   
   nav {
-    background-color: #000;
+    background-color: #16423C;
     padding: .5em;
+    letter-spacing: 1px;
+    font-weight: bold;
+    border-radius: 0 0 10px 10px;
+
+    /* Nav viewport attachment */
     position: sticky;
     top: 0;
   }
@@ -62,18 +71,29 @@ body {
   nav li {
     text-align: center;
     flex: 1;
+    white-space: nowrap;
+    height: 30px;
   }
   
-  nav a {
+  nav li > a {
     color: #fff;
     text-decoration: none;
     padding: .5em 1em;
+    border-bottom: transparent;
+    transition: border 0.1s ease;
+  }
+  
+  nav li > a:hover {
+    border-bottom: 3px solid white;
+    color: bisque;
   }
   
   .photos {
     list-style: none;
     margin: 0;
     padding: 0;
+
+    /* Photo grid layout */
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1px;
@@ -81,4 +101,8 @@ body {
 
   .feature {
     width: 200px;
+
+    /* Image text wrapping */
+    float: left;
+    margin-right: 10px;
   }
